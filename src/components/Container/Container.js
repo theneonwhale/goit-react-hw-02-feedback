@@ -5,7 +5,7 @@ function Container({ children }) {
   return <div className={s.container}>{children}</div>;
 }
 
-Notification.propTypes = {
+Container.propTypes = {
   children: PropTypes.node.isRequired,
 };
 

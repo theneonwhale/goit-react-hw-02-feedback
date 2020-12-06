@@ -3,12 +3,13 @@ import s from './FeedbackOptions.module.css';
 
 function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <div>
+    <div className={s.options}>
       {options.map(option => (
         <button
           type="button"
           key={option}
           onClick={() => onLeaveFeedback(option)}
+          className={s.button}
         >
           {option}
         </button>
