@@ -4,7 +4,6 @@ import s from './FeedbackOptions.module.css';
 function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <div>
-      <h1>Please leave feedback</h1>
       {options.map(option => (
         <button
           type="button"
@@ -17,5 +16,10 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
     </div>
   );
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
 
 export default FeedbackOptions;
